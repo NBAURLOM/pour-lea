@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pour Léa ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="progressBar"></div>
+
+<div id="achievement"></div>
+
+<div id="notification"></div>
+
+<!-- INTRO -->
+
+<section class="page active" id="intro">
+
+    <div class="card">
+
+        <h1>❤️ Salut Léa ❤️</h1>
+
+        <p class="introReveal">
+            Ce site a été développé avec beaucoup trop de café,
+            quelques bugs,
+            et environ 3 heures de réflexion.
+        </p>
+
+        <p class="introReveal">
+            Alors s'il te plaît...
+        </p>
+
+        <p class="introReveal important">
+            prends ton temps ❤️
+        </p>
+
+        <p>
+            Avant toute chose, j'ai une petite demande.
+        </p>
+
+        <p>
+            Lis tout ça tranquillement.
+        </p>
+
+        <p>
+            Prends ton temps.
+        </p>
+
+        <p>
+            Et surtout...
+        </p>
+
+        <p class="important">
+            Ne survole pas les pages en 17 secondes comme tu sais si bien le faire 😌
+        </p>
+
+        <p>
+            Oui oui...
+        </p>
+
+        <p>
+            Je te vois déjà vouloir aller trop vite.
+        </p>
+
+        <p>
+            Cette fois tu lis attentivement.
+        </p>
+
+        <p>
+            Promis, il y a quelques surprises.
+        </p>
+
+        <button onclick="nextPage('errorPage')">
+
+            🌹 Commencer
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ERREUR -->
+
+<section class="page" id="errorPage">
+
+    <div class="card">
+
+        <h2>❌ Erreur détectée</h2>
+
+        <p id="errorText">
+
+            Utilisateur beaucoup trop jolie détectée.
+
+        </p>
+
+        <button onclick="errorClick()">
+
+            Ignorer l'erreur
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- QUIZ -->
+
+<section class="page" id="quizPage">
+
+    <div class="card">
+
+        <h2>
+            🔍 Vérifions si c'est vraiment Léa
+        </h2>
+
+        <div id="quizContainer">
+
+            <h3>
+                Question 1 / 4
+            </h3>
+
+            <p>
+                Quelle est ta couleur préférée ?
+            </p>
+
+            <button onclick="quizAnswer(true)">
+                Rose 🌹
+            </button>
+
+            <button onclick="quizAnswer(false)">
+                Bleu
+            </button>
+
+            <button onclick="quizAnswer(false)">
+                Vert
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- GALERIE -->
+
+<section class="page" id="galleryPage">
+
+    <div class="card">
+
+        <h2>
+            📸 Galerie secrète
+        </h2>
+
+        <p>
+            J'ai choisi trois souvenirs.
+        </p>
+
+        <p>
+            Clique dessus pour les découvrir ❤️
+        </p>
+
+        <div class="photos">
+                        <div class="photoCard">
+
+                <button class="discoverBtn"
+                onclick="showPhotoText(1)">
+
+                    ❤️ Ton sourire
+
+                </button>
+
+                <div id="photo1" class="hiddenText">
+
+                    <img src="images/lea1.jpg">
+
+                    <p>
+
+                        J'ai cherché quoi écrire ici.
+
+                    </p>
+
+                    <p>
+
+                        Puis je me suis rendu compte que ton sourire faisait déjà mieux que tous les textes que je pourrais écrire.
+
+                    </p>
+
+                    <p>
+
+                        C'est probablement la première chose qui m'a marqué chez toi.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="photoCard">
+
+                <button class="discoverBtn"
+                onclick="showPhotoText(2)">
+
+                    📸 Pourquoi cette photo ?
+
+                </button>
+
+                <div id="photo2" class="hiddenText">
+
+                    <img src="images/lea2.jpg">
+
+                    <p>
+
+                        Le jour où tu m'as envoyé ces photos,
+                        je les ai regardées plusieurs fois.
+
+                    </p>
+
+                    <p>
+
+                        Et c'est probablement à ce moment-là
+                        que je me suis dit :
+
+                    </p>
+
+                    <p class="important">
+
+                        "Je veux garder cette femme dans ma vie."
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="photoCard">
+
+                <button class="discoverBtn"
+                onclick="showPhotoText(3)">
+
+                    ✨ Ta bienveillance
+
+                </button>
+
+                <div id="photo3" class="hiddenText">
+
+                    <img src="images/lea3.jpg">
+
+                    <p>
+
+                        Ce n'est pas quelque chose qui se voit forcément sur une photo.
+
+                    </p>
+
+                    <p>
+
+                        Mais c'est probablement ce qui m'a le plus marqué chez toi.
+
+                    </p>
+
+                    <p>
+
+                        Ta douceur.
+
+                        Ton attention.
+
+                        Ta façon d'être là pour les autres.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button onclick="nextPage('truthPage')">
+
+            Continuer
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- MACHINE À VÉRITÉ -->
+
+<section class="page" id="truthPage">
+
+    <div class="card">
+
+        <h2>
+            🎰 Machine à vérité
+        </h2>
+
+        <p>
+            Attention.
+        </p>
+
+        <p>
+            Cette machine contient des vérités que Nathan aurait probablement dû garder pour lui.
+        </p>
+
+        <p>
+            Utilisation à vos risques et périls 😌
+        </p>
+
+        <div id="truthBox">
+
+            <p id="truthText">
+                Appuie sur le bouton.
+            </p>
+
+        </div>
+
+        <button onclick="spinTruth()">
+
+            🎰 Lancer la machine
+
+        </button>
+
+        <button onclick="nextPage('sorryPage')">
+
+            Continuer
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- EXCUSES -->
+
+<section class="page" id="sorryPage">
+
+    <div class="card">
+
+        <h2>
+            💬 Quelque chose d'important
+        </h2>
+
+        <p class="fadeLine">
+            Léa,
+        </p>
+
+        <p class="fadeLine">
+            Je sais que je t'ai blessée.
+        </p>
+
+        <p class="fadeLine">
+            Je sais aussi que certaines de mes réactions ont pu te faire douter.
+        </p>
+
+        <p class="fadeLine">
+            Ce week-end, je me suis braqué au lieu de communiquer.
+        </p>
+
+        <p class="fadeLine">
+            J'ai laissé mes émotions prendre le dessus.
+        </p>
+
+        <p class="fadeLine">
+            Et ce n'est pas la personne que je voulais être avec toi.
+        </p>
+
+        <p class="fadeLine">
+            Tu méritais mieux que ça.
+        </p>
+
+        <p class="fadeLine">
+            Je voulais simplement reconnaître mes torts.
+        </p>
+
+        <p class="fadeLine">
+            Et te présenter mes excuses.
+        </p>
+
+        <p class="fadeLine important">
+
+            Malgré ce que j'ai pu montrer,
+
+            je serai là pour toi.
+
+        </p>
+
+        <p class="fadeLine">
+
+            Je ne suis pas parfait.
+
+        </p>
+
+        <p class="fadeLine">
+
+            Mais une chose est sûre :
+
+            je m'améliore chaque jour.
+
+        </p>
+
+        <p class="fadeLine">
+
+            Et j'aimerais continuer à te découvrir,
+
+            apprendre à te connaître davantage,
+
+            et créer de beaux souvenirs avec toi.
+
+        </p>
+
+        <button onclick="nextPage('macPage')">
+
+            Continuer
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- MAC -->
+
+<section class="page" id="macPage">
+
+    <div class="card">
+
+        <h2>
+            💻 Le mystère du Mac
+        </h2>
+                <p>
+            Beaucoup de personnes se demanderaient pourquoi offrir un Mac.
+        </p>
+
+        <p>
+            Mais ce cadeau n'était pas un hasard.
+        </p>
+
+        <p>
+            Il y avait une raison derrière.
+        </p>
+
+        <p>
+            Une promesse que je m'étais faite à moi-même.
+        </p>
+
+        <p>
+            Et cette promesse a joué un rôle dans ce choix.
+        </p>
+
+        <p class="important">
+            Si tu veux connaître cette histoire...
+        </p>
+
+        <p>
+            Demande-moi directement 😌
+        </p>
+
+        <button onclick="nextPage('activityPage')">
+            Continuer
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ACTIVITÉ -->
+
+<section class="page" id="activityPage">
+
+    <div class="card">
+
+        <h2>
+            🗺️ Configure ta journée
+        </h2>
+
+        <p>
+            Choisis l'activité qui te ferait le plus plaisir.
+        </p>
+
+        <div class="activityContainer">
+
+            <div class="activityCard">
+
+                <img src="images/aquarium.jpg">
+
+                <h3>🐠 Aquarium</h3>
+
+                <p>
+                    Ambiance calme, poissons, balade tranquille.
+                </p>
+
+                <button onclick="chooseActivity('Aquarium 🐠')">
+                    Choisir
+                </button>
+
+            </div>
+
+            <div class="activityCard">
+
+                <img src="images/louvre.jpg">
+
+                <h3>🖼️ Louvre</h3>
+
+                <p>
+                    Culture, balade et moments ensemble.
+                </p>
+
+                <button onclick="chooseActivity('Louvre 🖼️')">
+                    Choisir
+                </button>
+
+            </div>
+
+        </div>
+
+        <div id="dateChoices"></div>
+
+    </div>
+
+</section>
+
+<!-- CHOIX REPAS -->
+
+<div id="foodChoiceTemplate" style="display:none;">
+
+    <div class="choiceCard">
+
+        <h2>🍽️ Choisis l'ambiance</h2>
+
+        <div class="activityContainer">
+
+            <div class="activityCard">
+
+                <img src="images/mcdo.jpg">
+
+                <h3>🍔 McDo Chill</h3>
+
+                <p>
+                    Pas de prise de tête.
+                </p>
+
+                <button onclick="chooseFood('McDo Chill 🍔')">
+                    Choisir
+                </button>
+
+            </div>
+
+            <div class="activityCard">
+
+                <img src="images/restaurant.jpg">
+
+                <h3>🍝 Dîner</h3>
+
+                <p>
+                    Ambiance plus romantique.
+                </p>
+
+                <button onclick="chooseFood('Dîner 🍝')">
+                    Choisir
+                </button>
+
+            </div>
+
+            <div class="activityCard">
+
+                <h3>🥐 Improvisation</h3>
+
+                <p>
+                    Les meilleurs souvenirs ne sont pas toujours prévus.
+                </p>
+
+                <button onclick="chooseFood('Improvisation 🥐')">
+                    Choisir
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- REPONSE -->
+
+<div id="answerTemplate" style="display:none;">
+
+    <div class="choiceCard">
+
+        <h2>
+            📬 Dernière formalité
+        </h2>
+
+        <p>
+            Comment souhaites-tu me donner ta réponse ?
+        </p>
+
+        <button onclick="chooseAnswer('Appel 📞')">
+
+            📞 Appel
+
+            <br><br>
+
+            Option recommandée par Nathan 😌
+
+        </button>
+
+        <button onclick="chooseAnswer('Message 📩')">
+
+            📩 Message
+
+            <br><br>
+
+            Beh vas-y alors gogole 😒
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- FIN -->
+
+<section class="page" id="finalPage">
+
+    <div class="card">
+
+        <img src="images/nathan.jpg" class="finalNathan">
+
+        <h2>
+            Une dernière chose...
+        </h2>
+
+        <p>
+            Je ne suis pas parfait.
+        </p>
+
+        <p>
+            Je fais des erreurs.
+        </p>
+
+        <p>
+            Et je t'en ai montré certaines récemment.
+        </p>
+
+        <p class="important">
+            Mais je m'améliore chaque jour.
+        </p>
+
+        <p>
+            J'aimerais continuer à te découvrir.
+        </p>
+
+        <p>
+            Et créer de beaux souvenirs avec toi.
+        </p>
+
+        <p>
+            Alors je te laisse le choix ❤️
+        </p>
+
+        <button onclick="finalDecision('Oui ❤️')">
+            ❤️ Oui
+        </button>
+
+        <button onclick="finalDecision('J’ai besoin de réfléchir 🤔')">
+            🤔 J'ai besoin de réfléchir
+        </button>
+
+    </div>
+
+</section>
+
+<!-- RECAP -->
+
+<section class="page" id="summaryPage">
+
+    <div class="card">
+
+        <h2>
+            📋 Récapitulatif Final
+        </h2>
+
+        <div id="summaryContent"></div>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
